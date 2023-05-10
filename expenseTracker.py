@@ -1,7 +1,13 @@
 import mysql.connector
+from config import HOST, USER, PASSWORD, DATABASE
 
-# create a connection to the database
-mydb = mysql.connector.connect(host="127.0.0.1", user="root", password="1234", database="Expense_Tracking")
+# Create a connection to the database
+mydb = mysql.connector.connect(
+    host=HOST,
+    user=USER,
+    password=PASSWORD,
+    database=DATABASE
+)
 mycursor = mydb.cursor()
 
 #create a database
